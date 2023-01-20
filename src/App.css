@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s ease;
+}
+
+:root {
+  --primary-color: rgb(247, 111, 7);
+  --hover-color: hsl(26, 90%, 42);
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0, 18%);
+  --text-color: hsl(240, 1%, 48%);
+  --white-color-deam: hsl(0, 0%, 93%);
+  --gray-bg-color: hsl(0, 0%, 96%);
+  --gray-text-color: hsl(190, 190, 190);
+  --input-color: hsl(330, 12%, 97%);
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+.section {
+  padding: 4rem 0 2rem;
+}
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.icon {
+  font-size: 2rem;
+  cursor: pointer;
+  color: rgb(6, 132, 235);
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+.grid {
+  display: grid;
+  align-items: center;
+}
+.btn {
+  padding: 0.4rem 1.5rem;
+  background: var(--primary-color);
+  border: none;
+  outline: none;
+  border-radius: 3rem;
+  cursor: pointer;
+}
+.btn a {
+  color: var(--white-color);
+  font-weight: 500;
+}
+
+.btn:hover {
+  color: var(--white-color);
+}
+
+.secIntro {
+  max-width: 70%;
+  text-align: center;
+  margin: 0 auto 2rem;
+}
+.secIntro .secTitle {
+  color: var(--black-color);
+  line-height: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+.secIntro p {
+  font-size: 13px;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+img,
+video {
+  width: 100%;
+  height: auto;
+}
+input {
+  font-size: 100%;
+}
+
+/* Media Query */
+
+@media screen and (min-width:556px) {
+  .mainContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
