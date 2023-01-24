@@ -8,6 +8,9 @@
   transition: 0.3s ease;
 }
 
+body {
+  background: rgb(211, 222, 230);
+}
 :root {
   --primary-color: rgb(247, 111, 7);
   --hover-color: hsl(26, 90%, 42);
@@ -62,6 +65,7 @@ li {
 
 .btn:hover {
   color: var(--white-color);
+  background: var(--hover-color);
 }
 
 .secIntro {
@@ -91,10 +95,59 @@ input {
 
 /* Media Query */
 
-@media screen and (min-width:556px) {
+@media screen and (min-width: 556px) {
   .mainContainer {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+@media screen and (min-width: 860px) {
+  .mainContainer {
+    padding: 4rem 4rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .mainContainer {
+    padding: 4rem 4rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
+@media screen and (min-width: 1240px) {
+  .container {
+    width: 85% !important;
+    margin: auto !important;
+  }
+  .section {
+    padding: 5rem 0 3rem;
+  }
+  .secIntro {
+    margin: 0 auto 3rem;
+  }
+  .secIntro,
+  .secTitle {
+    line-height: 2rem;
+    padding-bottom: 1rem;
+    font-size: 2.2rem;
+  }
+  .secIntro p {
+    font-size: 15px;
+  }
+}
 
+@media screen and (min-width: 2560px) {
+  body {
+    zoom: 1.7;
+  }
+}
+
+/* Page Styles */
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+  background: var(--primary-color);
+  color: var(--white-color);
+}

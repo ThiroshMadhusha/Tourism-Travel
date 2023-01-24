@@ -7,6 +7,7 @@ import Home from "./Components/home/Home";
 import Navbar from "./Components/navbar/Navbar";
 import Offers from "./Components/offers/Offers";
 import Popular from "./Components/popular/Popular";
+// import NavBar from "./nav/NavBar";
 
 const App = () => {
   return (
