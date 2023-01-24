@@ -1,0 +1,194 @@
+:root {
+  --primary-color: rgb(247, 111, 7);
+  --hover-color: rgb(206, 94, 9);
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0, 18%);
+  --text-color: hsl(240, 1%, 48%);
+  --white-color-deam: hsl(0, 0%, 93%);
+  --gray-bg-color: hsl(0, 0%, 97%);
+  --gray-text-color: hsl(190, 190, 190);
+  --input-color: hsl(330, 12%, 97%);
+}
+
+.about {
+  padding-top: 8rem;
+  .secContainer {
+    .title {
+      color: var(--black-color);
+      line-height: 1.5rem;
+      padding-bottom: 2rem;
+      text-align: center;
+      font-size: 2rem;
+    }
+    .mainContainer {
+      gap: 1rem;
+      .singleItem {
+        text-align: center;
+
+        img {
+          background: rgba(39, 131, 252, 0.567);
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          padding: 0.5rem;
+        }
+        h3 {
+          padding: 0.5rem;
+          font-weight: 700;
+          color: var(--black-color);
+        }
+        p {
+          font-size: 13px;
+          font-weight: 500;
+          padding-bottom: 0.5rem;
+          color: var(--text-color);
+        }
+      }
+    }
+
+    .videoCard {
+      margin-top: 2rem;
+      background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.73),
+          rgba(0, 0, 0, 0.609)
+        ),
+        url(../../assets//images/img1.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      .cardContent {
+        gap: 1rem;
+        // padding: 2rem 1rem;
+
+        .cardText {
+          h2 {
+            color: var(--white-color);
+            font-weight: 600;
+            padding-bottom: 1rem;
+          }
+          p {
+            color: var(--white-color);
+            opacity: 0.7;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 1px;
+          }
+        }
+      }
+      .cardVideo {
+        border: 2px solid var(--white-color);
+        height: 200px;
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+
+        video {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 556px) {
+  .about {
+    .secContainer {
+      .videoCard {
+        .cardContent {
+          gap: 2rem;
+          height: 400px;
+
+          .cardVideo {
+            height: 250px;
+          }
+          .cardText {
+            h2 {
+              font-size: 2rem;
+            }
+            p {
+              opacity: 0.7;
+              font-size: 15px;
+            }
+          }
+        }
+        .cardContent {
+          grid-template-columns: repeat(2, 1fr) !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .about {
+    .secContainer {
+      .mainContainer {
+        .singleItem {
+          padding:2rem 4rem;
+        }
+      }
+      .videoCard {
+
+        .cardContent {
+          gap: 2rem;
+          height: 400px;
+
+          .cardVideo {
+            height: 250px;
+          }
+          .cardText {
+            h2 {
+              font-size: 2rem;
+            }
+            p {
+              opacity: 0.7;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+      .mainContainer {
+        padding: 2.5rem 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about {
+    .secContainer {
+      .mainContainer {
+        .singleItem {
+          padding:2rem 4rem;
+        }
+      }
+      .videoCard {
+
+        .cardContent {
+          gap: 6rem;
+          height: 400px;
+
+          .cardVideo {
+            height: 250px;
+          }
+          .cardText {
+            h2 {
+              font-size: 2rem;
+            }
+            p {
+              opacity: 0.7;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+      .mainContainer {
+        padding: 2.5rem 0;
+      }
+    }
+  }
+}

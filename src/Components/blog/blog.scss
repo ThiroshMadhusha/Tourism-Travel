@@ -1,0 +1,107 @@
+:root {
+  --primary-color: rgb(247, 111, 7);
+  --hover-color: rgb(206, 94, 9);
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0, 18%);
+  --text-color: hsl(240, 1%, 48%);
+  --white-color-deam: hsl(0, 0%, 93%);
+  --gray-bg-color: hsl(0, 0%, 97%);
+  --gray-text-color: hsl(190, 190, 190);
+  --input-color: hsl(330, 12%, 97%);
+}
+
+.blog {
+  padding-top: 8rem;
+  .secContainer{
+    .secIntro{
+      h2{
+        margin-bottom: .5rem;
+      }
+      // p{
+      //   padding: 1rem 6rem;
+      // }
+    }
+  }
+  .mainContainer {
+    gap: 1rem;
+    .singlePost {
+      gap: 2rem;
+
+      .imgDiv {
+        height: 200px;
+        width: 100%;
+        border-radius: 1rem;
+        box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.406);
+        overflow: hidden;
+        margin: auto;
+        border: 5px solid var(--gray-bg-color);
+
+        &:hover {
+          img {
+            transform: scale(1.1);
+            transform: 3s ease;
+          }
+        }
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .postDetails {
+        h3 {
+          color: var(--black-color);
+          font-weight: 600;
+          padding-bottom: 10px;
+        }
+        p {
+          font-size: 13px;
+          color: var(--text-color);
+          font-weight: 500;
+        }
+      }
+    }
+    a {
+      font-size: 15px;
+      color: var(--primary-color);
+      font-weight: 600;
+      padding-top: 0.5rem;
+      width: max-content;
+      &:hover {
+        color: rgb(0, 195, 255);
+        font-weight: 400;
+
+        .icons {
+          transform: translateX(10px);
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 568px) {
+  .blog{
+    .secContainer{
+      .mainContainer{
+        padding: 2rem 2rem;
+        gap: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 860px) {
+  .blog {
+    .mainContainer,
+    .singlePost {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (min-width: 1548px) {
+  .blog {
+    .mainContainer,
+    .singlePost {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

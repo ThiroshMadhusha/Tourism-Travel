@@ -1,0 +1,203 @@
+:root {
+  --primary-color: rgb(247, 111, 7);
+  --hover-color: rgb(206, 94, 9);
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0, 18%);
+  --text-color: hsl(240, 1%, 48%);
+  --white-color-deam: hsl(0, 0%, 93%);
+  --gray-bg-color: hsl(0, 0%, 97%);
+  --gray-text-color: hsl(190, 190, 190);
+  --input-color: hsl(330, 12%, 97%);
+}
+
+.popular {
+  padding-top: 20rem;
+}
+.popular .secContainer .secHeader {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.popular .secContainer .secHeader .textDiv .secTitle {
+  color: var(--black-color);
+  line-height: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+.popular .secContainer .secHeader .textDiv p {
+  font-size: 13px;
+  color: var(--text-color);
+  font-weight: 500;
+}
+.popular .secContainer .secHeader .iconsDiv {
+  gap: 0.5rem;
+}
+.popular .secContainer .secHeader .iconsDiv .icon {
+  padding: 0.5rem;
+  background: var(--gray-text-color);
+  border-radius: 50%;
+  font-size: 2.5rem;
+}
+.popular .secContainer .secHeader .iconsDiv .icon:hover {
+  background: var(--black-color);
+  -moz-column-rule: var(--white-color);
+       column-rule: var(--white-color);
+}
+.popular .secContainer .secHeader .iconsDiv .leftIcon {
+  background: var(--black-color);
+}
+.popular .secContainer .secHeader .iconsDiv .leftIcon:hover {
+  background: var(--gray-text-color);
+  color: var(--primary-color);
+}
+.popular .secContainer .secHeader .iconsDiv .rightIcon {
+  background: var(--black-color);
+}
+.popular .secContainer .secHeader .iconsDiv .rightIcon:hover {
+  background: var(--gray-text-color);
+  color: var(--primary-color);
+}
+.popular .secContainer .mainContainer {
+  gap: 3rem;
+}
+.popular .secContainer .mainContainer .singleDestination {
+  overflow: hidden;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 2px 8px 2px rgba(92, 83, 83, 0.63);
+}
+.popular .secContainer .mainContainer .singleDestination .destImage {
+  height: 200px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+.popular .secContainer .mainContainer .singleDestination .destImage img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.popular .secContainer .mainContainer .singleDestination .destImage .overlayInfo {
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  padding: 0;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(rgba(0, 0, 0, 0.846), rgba(0, 0, 0, 0.759));
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+}
+.popular .secContainer .mainContainer .singleDestination .destImage .overlayInfo h3 {
+  color: var(--white-color);
+  font-weight: 200;
+  padding: 1rem;
+}
+.popular .secContainer .mainContainer .singleDestination .destImage .overlayInfo p {
+  color: var(--white-color);
+  opacity: 0.7;
+  padding: 1rem;
+  font-size: 13px;
+}
+.popular .secContainer .mainContainer .singleDestination .destImage .overlayInfo .icon {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 0.1rem;
+  negative: var(--primary-color);
+  font-size: 2.5rem;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+.popular .secContainer .mainContainer .singleDestination .destImage .overlayInfo .icon:hover {
+  background: var(--white-color);
+  color: var(--primary-color);
+}
+.popular .secContainer .mainContainer .singleDestination .destFooter {
+  padding: 1rem;
+}
+.popular .secContainer .mainContainer .singleDestination .destFooter .number {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--black-color);
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.popular .secContainer .mainContainer .singleDestination .destFooter .destText {
+  justify-content: space-between;
+}
+.popular .secContainer .mainContainer .singleDestination .destFooter .destText h6 {
+  color: var(--black-color);
+  font-size: 12px;
+}
+.popular .secContainer .mainContainer .singleDestination .destFooter .destText .flex {
+  font-size: 18px;
+  font-weight: 600;
+  align-items: flex-start;
+  transform: translateY(5px);
+}
+.popular .secContainer .mainContainer .singleDestination .destFooter .destText .flex .icon {
+  color: var(--primary-color);
+}
+.popular .secContainer .mainContainer .singleDestination:hover .overlayInfo {
+  overflow: visible;
+  padding: 1rem 1.5rem;
+  height: 100%;
+}
+
+@media screen and (min-width: 480px) {
+  .popular {
+    padding-top: 10rem;
+  }
+}
+@media screen and (min-width: 558px) {
+  .popular .secContainer .secHeader {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .popular .secContainer .secHeader .textDiv {
+    text-align: start;
+  }
+  .popular .secContainer .secHeader .iconsDiv {
+    justify-content: flex-end;
+  }
+}
+@media screen and (min-width: 568px) {
+  .popular .secContainer .secHeader {
+    padding: 2rem 2rem;
+  }
+  .popular .secContainer .mainContainer {
+    padding: 1rem 2rem;
+  }
+}
+@media screen and (min-width: 868px) {
+  .popular .secContainer .secHeader {
+    padding: 1rem 4rem;
+  }
+  .popular .secContainer .mainContainer {
+    padding: 1rem 4rem;
+  }
+}
+@media screen and (min-width: 1248px) {
+  .popular {
+    padding-top: 10rem;
+  }
+  .popular .secContainer .secHeader .textDiv .secTitle {
+    font-size: 2.2rem;
+    padding-bottom: 1.5rem;
+  }
+  .popular .secContainer .secHeader .textDiv p {
+    font-size: 15px;
+  }
+  .popular .secContainer .mainContainer {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem !important;
+  }
+}/*# sourceMappingURL=popular.css.map */
