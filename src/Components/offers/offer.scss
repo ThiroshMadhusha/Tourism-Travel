@@ -1,0 +1,144 @@
+:root {
+  --primary-color: rgb(247, 111, 7);
+  --hover-color: rgb(206, 94, 9);
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0, 18%);
+  --text-color: hsl(240, 1%, 48%);
+  --white-color-deam: hsl(0, 0%, 93%);
+  --gray-bg-color: hsl(0, 0%, 97%);
+  --gray-text-color: hsl(190, 190, 190);
+  --input-color: hsl(330, 12%, 97%);
+}
+
+.offer {
+  padding-top: 8rem;
+  .secContainer {
+    .secIntro{
+      h2{
+        margin-bottom: 1rem;
+      }
+      // p{
+      //   text-align: center;
+      //   padding: 1rem 10rem;
+      // }
+    }
+    .mainContainer {
+      gap: 3rem;
+
+      .singleOffer {
+        border-radius: 1rem;
+        overflow: hidden;
+        padding: 0.5rem;
+        box-shadow: 0 2px 8px 2px rgba(92, 83, 83, 0.63);
+
+        .icon {
+          font-size: 20px;
+          color: var(--text-color);
+        }
+        small {
+          font-weight: 500;
+          color: var(--text-color);
+        }
+        .destImage {
+          position: relative;
+          height: 200px;
+          width: 100%;
+          border-radius: 1rem;
+          overflow: hidden;
+
+          img {
+            height: 100%;
+          }
+          .discount {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            background: var(--primary-color);
+            color: var(--white-color);
+            border-radius: 3rem;
+            font-weight: 500;
+            font-size: 12px;
+          }
+        }
+        .offerBody {
+          padding: 1rem;
+
+          .price {
+            justify-content: space-between;
+
+            h4 {
+              color: var(--black-color);
+              font-weight: 700;
+              font-size: 1.1rem;
+            }
+            .status {
+              padding: 5px 10px;
+              color: var(--hover-color);
+              background: var(--gray-text-color);
+              font-size: 10px;
+              font-weight: 600;
+              border-radius: 3rem;
+            }
+          }
+          .fcard {
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            padding: 1rem 0;
+            gap: 0.5rem;
+
+            .singlefcard {
+              padding: 5px 10px;
+              border-radius: 5px;
+              background: var(--gray-text-color);
+              gap: 0.5rem;
+            }
+            
+          }
+          .location{
+                padding: 5px 8px;
+            }
+          .btn {
+            margin-top: 1rem;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            padding: 0.6rem;
+            color: var(--white-color);
+            font-weight: 600;
+            gap: 0.5rem;
+
+            .icon {
+              color: var(--white-color);
+            }
+          }
+        }
+        &:hover {
+          transform: translateY(-7px);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width:568px) {
+  .offer{
+    .secContainer{
+      .mainContainer{
+        padding: 1rem 2rem;
+      }
+    }
+  }
+  
+}
+@media screen and (min-width:864px) {
+  .offer{
+    .secContainer{
+      .mainContainer{
+        padding: 1rem 4rem;
+      }
+    }
+  }
+  
+}
