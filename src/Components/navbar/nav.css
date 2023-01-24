@@ -1,0 +1,163 @@
+:root {
+  --primary-color: rgb(247, 111, 7);
+  --hover-color: rgb(206, 94, 9);
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0, 18%);
+  --text-color: hsl(240, 1%, 48%);
+  --white-color-deam: hsl(0, 0%, 93%);
+  --gray-bg-color: hsl(0, 0%, 97%);
+  --gray-text-color: hsl(190, 190, 190);
+  --input-color: hsl(330, 12%, 97%);
+}
+
+.navBarSection .header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  z-index: 1000;
+}
+.navBarSection .header .logoDiv .logo {
+  font-size: 1rem;
+  color: var(--primary-color);
+  font-weight: 500;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.navBarSection .header .logoDiv .logo .icon {
+  font-size: 25px;
+  margin-right: 10px;
+}
+@media screen and (max-width: 768px) {
+  .navBarSection .header .navBar {
+    background: rgb(247, 247, 247);
+    position: absolute;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    padding: 1rem;
+    width: 50%;
+    top: 0;
+    right: -500%;
+    box-shadow: 0 2px 4px rgba(209, 209, 209, 0.904);
+    transition: 0.5s ease-in-out;
+    z-index: 1000;
+  }
+  .navBarSection .header .navBar .navLists {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+  }
+  .navBarSection .header .navBar .navLists .navItem {
+    display: inline-block;
+    background: transparent;
+    padding: 1rem 0;
+    margin-top: 2rem;
+  }
+  .navBarSection .header .navBar .navLists .navItem .navLink {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .navBarSection .header .navBar .navLists .navItem .navLink:hover {
+    color: var(--primary-color);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns {
+    flex-direction: column;
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .btn {
+    margin-top: 1rem;
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .btn a {
+    font-weight: 600;
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .btn a:hover {
+    color: var(--white-color);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .loginBtn {
+    background: none;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .loginBtn a {
+    color: var(--primary-color);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .loginBtn:hover {
+    background-color: var(--primary-color);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .loginBtn:hover a {
+    color: var(--white-color);
+  }
+  .navBarSection .header .navBar .closeNavBar {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: var(--primary-color);
+  }
+  .navBarSection .header .navBar .closeNavBar:hover .icon {
+    color: var(--hover-color);
+  }
+  .navBarSection .header .activeNavBar {
+    right: 0;
+  }
+}
+.navBarSection .header .toggleNavbar .icon {
+  font-size: 25px;
+}
+.navBarSection .header .toggleNavbar .icon:hover {
+  color: var(--primary-color);
+}
+.navBarSection .activeHeader {
+  background: #170d41;
+}
+
+@media screen and (min-width: 769px) {
+  .navBarSection .toggleNavbar,
+.navBarSection .closeNavBar {
+    display: none;
+  }
+  .navBarSection .header {
+    padding: 1.5rem 2rem !important;
+  }
+  .navBarSection .header .navBar .navLists {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .navBarSection .header .navBar .navLists .navItem .navLink {
+    color: white;
+    padding: 0 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .navBarSection .header .navBar .navLists .navItem .navLink:hover {
+    color: var(--primary-color);
+  }
+  .navBarSection .header .navBar .navLists .btn {
+    margin-left: 1rem;
+  }
+  .navBarSection .header .navBar .navLists .btn a {
+    color: var(--white-color);
+    font-weight: 600;
+  }
+}
+@media screen and (min-width: 960px) {
+  .header .navBar .navLists .navItem {
+    padding: 0 0.7rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .navBarSection .header .logoDiv {
+    padding-left: 5rem;
+  }
+  .navBarSection .header .navBar .navLists {
+    padding-right: 5rem;
+  }
+}/*# sourceMappingURL=nav.css.map */

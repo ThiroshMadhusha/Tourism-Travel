@@ -1,0 +1,213 @@
+:root {
+  --primary-color: rgb(247, 111, 7);
+  --hover-color: rgb(206, 94, 9);
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0, 18%);
+  --text-color: hsl(240, 1%, 48%);
+  --white-color-deam: hsl(0, 0%, 93%);
+  --gray-bg-color: hsl(0, 0%, 97%);
+  --gray-text-color: hsl(190, 190, 190);
+  --input-color: hsl(330, 12%, 97%);
+}
+
+.navBarSection {
+  .header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    // background-color: rgba(104, 104, 104, 0.164);
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    z-index: 1000;
+
+    .logoDiv {
+      .logo {
+        font-size: 1rem;
+        color: var(--primary-color);
+        font-weight: 500;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+
+        .icon {
+          font-size: 25px;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .navBar {
+        background: rgb(247, 247, 247);
+        position: absolute;
+        height: max-content;
+        padding: 1rem;
+        width: 50%;
+        top: 0;
+        right: -500%;
+        box-shadow: 0 2px 4px rgba(209, 209, 209, 0.904);
+        transition: 0.5s ease-in-out;
+        z-index: 1000;
+
+        .navLists {
+          flex-direction: column;
+          justify-content: center;
+          width: 100%;
+          margin: auto;
+
+          .navItem {
+            display: inline-block;
+            background: transparent;
+            padding: 1rem 0;
+            margin-top: 2rem;
+
+            .navLink {
+              color: var(--text-color);
+              font-size: 0.9rem;
+              font-weight: 600;
+              &:hover {
+                color: var(--primary-color);
+              }
+            }
+          }
+          .headerBtns {
+            flex-direction: column;
+
+            .btn {
+              margin-top: 1rem;
+
+              a {
+                font-weight: 600;
+
+                &:hover {
+                  color: var(--white-color);
+                }
+              }
+            }
+            .loginBtn {
+              background: none;
+              border: 1px solid var(--primary-color);
+              color: var(--primary-color);
+
+              a {
+                color: var(--primary-color);
+              }
+              &:hover {
+                background-color: var(--primary-color);
+
+                a {
+                  color: var(--white-color);
+                }
+              }
+            }
+          }
+        }
+        .closeNavBar {
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+          color: var(--primary-color);
+          &:hover .icon {
+            color: var(--hover-color);
+          }
+        }
+      }
+
+      .activeNavBar {
+        right: 0;
+      }
+    }
+
+    .toggleNavbar {
+      .icon {
+        font-size: 25px;
+        &:hover {
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+
+  .activeHeader {
+    background: #170d41;
+    // background: transparent;
+    // box-shadow: 0 2px 8px 4px rgba(172, 175, 177, 0.45);
+  }
+}
+
+// @media screen and (min-width:568px) {
+//   .navBar{
+//     width: 20%;
+//   }
+
+// }
+
+@media screen and (min-width: 769px) {
+  .navBarSection {
+    .toggleNavbar,
+    .closeNavBar {
+      display: none;
+    }
+    .header {
+      padding: 1.5rem 2rem !important;
+      .navBar {
+        .navLists {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: row;
+          .navItem {
+            .navLink {
+              color: white;
+              padding: 0 2rem;
+              font-size: 1rem;
+              font-weight: 600;
+
+              &:hover {
+                color: var(--primary-color);
+              }
+            }
+          }
+          .btn {
+            margin-left: 1rem;
+
+            a {
+              color: var(--white-color);
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .header {
+    .navBar {
+      .navLists {
+        .navItem {
+          padding: 0 0.7rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navBarSection {
+    .header {
+      .logoDiv {
+        padding-left: 5rem;
+      }
+      .navBar {
+        .navLists {
+          padding-right: 5rem;
+        }
+      }
+    }
+  }
+}
