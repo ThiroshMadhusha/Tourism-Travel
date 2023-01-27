@@ -35,6 +35,9 @@ const About = () => {
             );
           })}
         </div>
+        {/* remove for responsive crash */}
+
+        
         {/* <div className="videoCard container">
           <div className="cardContent grid">
             <div
